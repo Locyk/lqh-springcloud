@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: lqh-cloud
+  profiles:
+    active: dev #默认为开发环境
+
+server:
+  port: 8081
+
+logging:
+  level:
+    root: info
+  config: classpath:log/logback-dev.xml
+
+

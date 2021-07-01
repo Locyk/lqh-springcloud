@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    # MySql
+    url: jdbc:mysql://192.168.0.36:3306/blade-boot?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true
+    username: root
+    password: 1qaz2wsx
+
+
+  rabbitmq:
+    host: localhost # rabbitmq的连接地址
+    port: 5672 # rabbitmq的连接端口号
+    virtual-host: /lqh # rabbitmq的虚拟host
+    username: lqh # rabbitmq的用户名
+    password: 1qaz2wsx # rabbitmq的密码
+    publisher-confirm-type: correlated #如果对异步消息需要回调必须设置为true
+
