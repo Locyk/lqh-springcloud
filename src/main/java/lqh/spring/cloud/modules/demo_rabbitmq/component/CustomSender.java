@@ -19,6 +19,15 @@ public class CustomSender {
     @Autowired
     private AmqpTemplate amqpTemplate;
 
+    /**
+     *
+     *
+     * @description:
+     * @param null
+     * @return: 
+     * @author: Locyk
+     * @time: 2021/7/1 0001 上午 10:37
+     */    
     public void sendMessage(Long orderId,final long delayTimes){
         //给延迟队列发送消息
         amqpTemplate.convertAndSend(QueueEnum.QUEUE_TTL_ORDER_CANCEL.getExchange(), QueueEnum.QUEUE_TTL_ORDER_CANCEL.getRouteKey(), orderId, new MessagePostProcessor() {
