@@ -42,6 +42,7 @@ public class AdminUserController {
     @ResponseBody
     public CommonResult<AdminUser> register(@Validated @RequestBody AdminUserParam adminUserParam) {
         AdminUser umsAdmin = adminService.register(adminUserParam);
+        String a = "ceshi";
         if (umsAdmin == null) {
             return CommonResult.failed();
         }
