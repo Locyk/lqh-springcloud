@@ -35,6 +35,7 @@ public class AdminUserController {
     private AdminUserService adminService;
 //    @Autowired
 //    private AdminRoleService roleService;
+    //测试
 
     @ApiOperation(value = "用户注册")
     @RequestMapping(value = "/register", method = RequestMethod.POST)
